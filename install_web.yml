@@ -1,0 +1,9 @@
+- hosts: nodes
+  become: yes
+  tasks:
+    - name: Install Nginx and PHP on clone
+      dnf:
+        name:
+          - nginx
+          - php
+        state: present
